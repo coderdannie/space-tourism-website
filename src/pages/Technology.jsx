@@ -1,13 +1,11 @@
 import { styled } from 'styled-components';
 
 import TechnologyArticle from '../Components/TechnologyArticle';
-import { useGlobalContext } from '../context/context';
+
 import TechnologyPictures from '../Components/TechnologyPictures';
+import TechnologyTabs from '../Components/TechnologyTabs';
 
 const Technology = () => {
-  const { spaceData, currentTechItem, setCurrentTechItem } = useGlobalContext();
-  const [...data] = spaceData.technology;
-
   return (
     <Wrapper className=" grid-container grid-container--technology flow">
       <h1 className="numbered-title">
@@ -15,26 +13,7 @@ const Technology = () => {
         Space launch 101
       </h1>
       <TechnologyPictures />
-      <div
-        className="numbered-list flex flex-jc-c"
-        aria-label="technology list"
-        role="tab list"
-      >
-        {data.map((_, i) => {
-          return (
-            <button
-              className="ff-serif text-accent flex"
-              aria-selected={currentTechItem == i ? 'true' : 'false'}
-              key={i}
-              onClick={() => {
-                setCurrentTechItem(i);
-              }}
-            >
-              {i + 1}
-            </button>
-          );
-        })}
-      </div>
+      <TechnologyTabs />
       <TechnologyArticle />
     </Wrapper>
   );
