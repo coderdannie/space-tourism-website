@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution Url](https://www.frontendmentor.io/solutions/responsive-space-tourism-website-FUVsabYJI2)
-- Live Site URL: [Live site Url](https://space-tourism-website-coderdannie.netlify.app/)
+- Solution URL: [solution-url](https://www.frontendmentor.io/solutions/responsive-space-tourism-website-FUVsabYJI2)
+- Live Site URL: [space-tourism-website-url](https://space-tourism-website-coderdannie.netlify.app/)
 
 ## My process
 
