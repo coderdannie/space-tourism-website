@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://your-solution-url.com)
-- Live Site URL: [](https://your-live-site-url.com)
+- Solution URL: [](https://www.frontendmentor.io/solutions/responsive-space-tourism-website-FUVsabYJI2)
+- Live Site URL: [](https://space-tourism-website-coderdannie.netlify.app/)
 
 ## My process
 
@@ -49,11 +49,11 @@ Users should be able to:
 
 ### What I learned
 
-- I learned a lot building this project. I used react router which makes my work more faster and I also tried as much as possible to make this website responsive and accessible using various attributes and leveraging on reactJS logics and styles for the functionalities. The local data.json file provided is not working properly. The images are broken so I had to use the contents only together with the local pictures provided. I also added 404 page as a plus
+- I learn a lot building this project. I used react-router which makes my work faster and I also tried as much as possible to make this website responsive and accessible using various attributes and leveraging on reactJS logic and styles for the functionalities. The local data.json file provided is not working properly. The images are broken so I had to use the contents only together with the local pictures provided. I also added a 404 page as a plus
 
 ### Continued development
 
-Areas I want to continue focusing on is basically how to consume APIs for bigger projects, responsiveness, accessibility and best practices.
+Areas I want to continue focusing on are basically how to consume APIs for bigger projects, responsiveness, accessibility, and best practices.
 
 ## Author
 
@@ -62,4 +62,4 @@ Areas I want to continue focusing on is basically how to consume APIs for bigger
 
 ## Acknowledgments
 
-I want to use this medium to thank my brilliant teacher/tutor @kelvin Powell and John Smilga. Making the site responsive and accessible was a big thing for me at the start so I decided to take Kelvin's course which enlighten me more on how to build this project and i really learn a lot from his course as well. Am currently taking John Smilga react course on Udemy. I have learn greatly from building an e-commerce website together with him which also motivated me to take on this frontend mentor challenge
+I want to use this medium to thank my brilliant teachers/tutor @kelvin Powell and John Smilga. Making the site responsive and accessible was a big thing for me at the start so I decided to take Kelvin's course which enlighten me more on how to build this project and I learn a lot from his course as well. Am currently taking John Smilga's React course on Udemy. I have learned extensively by building an e-commerce website together with him which also motivated me to take on this frontend mentor challenge.
