@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { navLinks } from '../utils/constant';
 import styled from 'styled-components';
 import { useGlobalContext } from '../context/context';
@@ -10,23 +10,24 @@ const Sidebar = () => {
         isExpanded ? 'aside-navigation open-sidebar' : 'aside-navigation'
       }
     >
-      <ul className=" flex underline-indicators mobile-links" data-visible="">
+      <ul className=" flex underline-indicators mobile-links">
         {navLinks.map((link, i) => {
           const index = i + 1;
 
           const { id, text, url, num } = link;
           return (
-            <li
-              key={id}
-              className={activeItem == index ? 'active' : ''}
-              onClick={() => handleItemClick(index)}
-            >
-              <Link
+            <li key={id} onClick={() => handleItemClick(index)}>
+              <NavLink
                 to={url}
-                className="ff-sans-cond uppercase text-white letter-spacing-2"
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'ff-sans-cond uppercase text-white letter-spacing-2 active'
+                    : 'ff-sans-cond uppercase text-white letter-spacing-2';
+                }}
+                end
               >
                 <span>{num}</span> {text}
-              </Link>
+              </NavLink>
             </li>
           );
         })}

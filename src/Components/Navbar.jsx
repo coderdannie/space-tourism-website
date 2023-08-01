@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../assets/shared/logo.svg';
 import iconClose from '../assets/shared/icon-close.svg';
@@ -27,25 +27,22 @@ const Navbar = () => {
         <span className="sr-only">Menu</span>
       </button>
       <nav>
-        <ul
-          className="primary-navigation flex  underline-indicators"
-          data-visible="false"
-        >
+        <ul className="primary-navigation flex  underline-indicators">
           {navLinks.map((link, i) => {
             const index = i + 1;
             const { id, text, url, num } = link;
             return (
-              <li
-                key={id}
-                className={activeItem == index ? 'active' : ''}
-                onClick={() => handleItemClick(index)}
-              >
-                <Link
+              <li key={id} onClick={() => handleItemClick(index)}>
+                <NavLink
                   to={url}
-                  className="ff-sans-cond uppercase text-white letter-spacing-2"
+                  className={({ isActive }) => {
+                    return isActive
+                      ? 'ff-sans-cond uppercase text-white letter-spacing-2 active'
+                      : 'ff-sans-cond uppercase text-white letter-spacing-2';
+                  }}
                 >
                   <span>{num}</span> {text}
-                </Link>
+                </NavLink>
               </li>
             );
           })}
@@ -113,13 +110,6 @@ const Wrapper = styled.header`
     }
   }
 
-  .underline-indicators > *:hover,
-  .underline-indicators > *:focus {
-    border-color: hsl(var(--clr-white) / 0.5);
-  }
-  .underline-indicators > active {
-    border-color: hsl(var(--clr-white) / 0.5);
-  }
   .tab-list {
     --gap: 2rem;
   }
